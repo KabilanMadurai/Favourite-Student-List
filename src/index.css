@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+
+    min-height: 100vh;
+
+    color: #172033;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(99, 102, 241, 0.18),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 90% 15%,
+            rgba(168, 85, 247, 0.16),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 80% 85%,
+            rgba(236, 72, 153, 0.12),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 15% 85%,
+            rgba(59, 130, 246, 0.10),
+            transparent 25%
+        ),
+        #f8fafc;
+
+    overflow-x: hidden;
+}
+body::before {
+    content: "";
+
+    position: fixed;
+
+    width: 500px;
+    height: 500px;
+
+    top: -180px;
+    left: -150px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        rgba(99, 102, 241, 0.20),
+        rgba(168, 85, 247, 0.08)
+    );
+
+    filter: blur(20px);
+
+    z-index: -1;
+
+    pointer-events: none;
+}
+
+body::after {
+    content: "";
+
+    position: fixed;
+
+    width: 450px;
+    height: 450px;
+
+    right: -160px;
+    bottom: -180px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        rgba(236, 72, 153, 0.15),
+        rgba(99, 102, 241, 0.08)
+    );
+
+    filter: blur(25px);
+
+    z-index: -1;
+
+    pointer-events: none;
+}
+
+button,
+a {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.page-container {
+    position: relative;
+}
+
+.page-container::before {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(99, 102, 241, 0.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(99, 102, 241, 0.035) 1px,
+            transparent 1px
+        );
+
+    background-size: 45px 45px;
+
+    pointer-events: none;
+
+    z-index: -1;
+}
